@@ -93,7 +93,7 @@ Error Handling
 The library provides basic error handling for invalid JSON data. If the JSON decoder encounters any errors during decoding, it throws a `JSON::JSONDecodeError` exception with an error message describing the issue.
 To handle potential exceptions, wrap the decoding process with a try-catch block:
 
-    ```cpp
+```cpp
     try {
         JSON::Decoder decoder;
         JSON::Value value = decoder.decode(jsonString);
@@ -101,6 +101,6 @@ To handle potential exceptions, wrap the decoding process with a try-catch block
     } catch (const JSON::JSONDecodeError& error) {
         std::cerr << "Error decoding JSON: " << error.what() << std::endl;
     }
-    ```
+```
 
 Note: Make sure to catch the JSON::JSONDecodeError exception to handle decoding errors specifically.
